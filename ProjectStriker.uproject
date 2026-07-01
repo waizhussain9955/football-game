@@ -7,15 +7,36 @@
 		{
 			"Name": "ProjectStriker",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
-			"Name": "EnhancedInput",
+			"Name": "ProjectStrikerCore",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectStrikerGameplay",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectStrikerAI",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectStrikerPhysics",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectStrikerAnimation",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectStrikerTools",
+			"Enabled": true
+		},
+		{
+			"Name": "ProjectStrikerEditor",
 			"Enabled": true
 		}
 	]
