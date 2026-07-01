@@ -65,3 +65,9 @@ enum class EStrikerPlayerStatus : uint8
 {
     Alive, Active, Recovering, Disabled
 };
+
+UENUM(BlueprintType)
+enum class EStrikerBallState : uint8
+{
+    Idle, Ready, Kickoff, Controlled, Loose, Rolling, Sliding, Airborne, Curving, Bouncing, Deflected, Intercepted, OutOfPlay, Goal, Replay, Frozen, Destroyed
+};
