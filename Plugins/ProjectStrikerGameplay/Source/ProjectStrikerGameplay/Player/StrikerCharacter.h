@@ -17,6 +17,7 @@ class UStrikerFootPlacementComponent;
 class UStrikerMovementPredictionComponent;
 class UStrikerDebugComponent;
 class UStrikerActionComponent;
+class UStrikerAnimationComponent;
 
 UCLASS()
 class PROJECTSTRIKERGAMEPLAY_API AStrikerCharacter : public ACharacter
@@ -65,6 +66,10 @@ public:
     // Action Component Injection (Part 7)
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Striker|Components")
     UStrikerActionComponent* Action;
+    
+    // Animation Component Injection (Part 9)
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Striker|Components")
+    UStrikerAnimationComponent* Animation;
 
 protected:
     virtual void PostInitializeComponents() override;

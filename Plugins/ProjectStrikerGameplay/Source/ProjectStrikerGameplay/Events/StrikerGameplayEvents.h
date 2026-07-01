@@ -77,3 +77,9 @@ enum class EStrikerActionState : uint8
 {
     Idle, Preparing, Charging, Executing, Recovering, Cancelled, Interrupted, Failed, Completed
 };
+
+UENUM(BlueprintType)
+enum class EStrikerAnimationState : uint8
+{
+    Locomotion, FootballActions, Goalkeeper, Referee, Celebration, SetPieces, Injury, Recovery, Disabled
+};

@@ -12,6 +12,8 @@
 #include "Player/Components/StrikerMovementPredictionComponent.h"
 #include "Player/Components/StrikerDebugComponent.h"
 #include "Player/Components/StrikerActionComponent.h"
+// UStrikerAnimationComponent implementation exists in ProjectStrikerAnimation module
+#include "Components/StrikerAnimationComponent.h"
 #include "StrikerLog.h"
 
 AStrikerCharacter::AStrikerCharacter()
@@ -34,6 +36,9 @@ AStrikerCharacter::AStrikerCharacter()
     
     // Action Component Injection
     Action = CreateDefaultSubobject<UStrikerActionComponent>(TEXT("Action"));
+    
+    // Animation Component Injection
+    Animation = CreateDefaultSubobject<UStrikerAnimationComponent>(TEXT("Animation"));
 }
 
 void AStrikerCharacter::PostInitializeComponents()
@@ -47,7 +52,7 @@ void AStrikerCharacter::PostInitializeComponents()
     // 4. Rotation
     // 5. Collision
     // 6. Interaction
-    // 7. Animation (Future)
+    // 7. Action
     // 8. Debug
-    // 9. Action
+    // 9. Animation
 }
