@@ -6,6 +6,7 @@
 
 class USphereComponent;
 class UStaticMeshComponent;
+class AStrikerCharacter;
 
 UCLASS()
 class PROJECTSTRIKER_API AStrikerBall : public AActor
@@ -27,6 +28,23 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UStaticMeshComponent* MeshComp;
 
+	// Advanced Physics Data
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Physics")
+	FVector CurrentSpin;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Physics")
+	float MagnusCoefficient;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Physics")
+	float GroundFrictionCoefficient;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Ownership")
+	AStrikerCharacter* LastTouchedBy;
+
 	UFUNCTION(BlueprintCallable, Category = "Physics")
-	void ApplyKickImpulse(FVector Direction, float Force);
+	void ApplyKickImpulse(FVector Direction, float Force, FVector SpinAmount);
+
+private:
+	void CalculateMagnusEffect(float DeltaTime);
+	void DetectGoalAndPossession();
 };

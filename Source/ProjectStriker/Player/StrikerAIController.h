@@ -2,7 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "StrikerTacticalRoles.h"
 #include "StrikerAIController.generated.h"
+
+class UStateTree;
 
 UCLASS()
 class PROJECTSTRIKER_API AStrikerAIController : public AAIController
@@ -19,5 +22,14 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
-	// Blackboard keys or references can be set here
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI|Tactics")
+	EStrikerTacticalRole AssignedRole;
+
+	// In a real project, we would use UStateTreeComponent. 
+	// For architecture setup, we store references to the State Trees.
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI|StateTree")
+	UStateTree* ActiveStateTree;
+
+	UFUNCTION(BlueprintCallable, Category = "AI|Tactics")
+	void AssignRole(EStrikerTacticalRole NewRole, UStateTree* RoleStateTree);
 };

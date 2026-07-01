@@ -4,6 +4,8 @@
 AStrikerAIController::AStrikerAIController()
 {
 	PrimaryActorTick.bCanEverTick = true;
+	AssignedRole = EStrikerTacticalRole::CentralMidfielder;
+	ActiveStateTree = nullptr;
 }
 
 void AStrikerAIController::BeginPlay()
@@ -14,13 +16,18 @@ void AStrikerAIController::BeginPlay()
 void AStrikerAIController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
-	
-	// Start behavior tree logic
+	// Initialize State Tree logic via UStateTreeComponent if added
 }
 
 void AStrikerAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
-	// Update AI tactical decisions
+	// Tactical evaluations happen here, State Tree handles execution
+}
+
+void AStrikerAIController::AssignRole(EStrikerTacticalRole NewRole, UStateTree* RoleStateTree)
+{
+	AssignedRole = NewRole;
+	ActiveStateTree = RoleStateTree;
+	// Restart State Tree with new role parameters
 }
