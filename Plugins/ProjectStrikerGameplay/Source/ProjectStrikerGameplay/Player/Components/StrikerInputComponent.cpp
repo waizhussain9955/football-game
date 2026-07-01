@@ -1,21 +1,11 @@
-#include "StrikerInputComponent.h"
+#include "Player/Components/StrikerInputComponent.h"
 
 UStrikerInputComponent::UStrikerInputComponent()
 {
-	PrimaryComponentTick.bCanEverTick = true;
+    PrimaryComponentTick.bCanEverTick = false; // Strictly enforced
 }
 
 void UStrikerInputComponent::BeginPlay()
 {
-	Super::BeginPlay();
-}
-
-void UStrikerInputComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-}
-
-void UStrikerInputComponent::SetMoveInput(FVector2D NewInput)
-{
-	MoveInput = NewInput;
+    Super::BeginPlay();
 }

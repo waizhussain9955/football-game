@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "StrikerInputComponent.generated.h"
+#include "StrikerGameplayTagComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class PROJECTSTRIKERGAMEPLAY_API UStrikerInputComponent : public UActorComponent
+class PROJECTSTRIKERGAMEPLAY_API UStrikerGameplayTagComponent : public UActorComponent
 {
     GENERATED_BODY()
 public:	
-    UStrikerInputComponent();
+    UStrikerGameplayTagComponent();
 protected:
     virtual void BeginPlay() override;
 public:	

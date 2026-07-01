@@ -51,3 +51,17 @@ struct PROJECTSTRIKERGAMEPLAY_API FFoulCommittedMessage
 
 USTRUCT(BlueprintType)
 struct PROJECTSTRIKERGAMEPLAY_API FSubstitutionMessage { GENERATED_BODY() };
+
+UENUM(BlueprintType)
+enum class EStrikerMovementState : uint8
+{
+    Idle, Walk, Jog, Run, Sprint, Accelerating, Decelerating,
+    TurnLeft, TurnRight, Pivot, Stop, Backpedal, StrafeLeft, StrafeRight,
+    Jump, Land, Recover, Stunned, Fallen, GettingUp, Disabled
+};
+
+UENUM(BlueprintType)
+enum class EStrikerPlayerStatus : uint8
+{
+    Alive, Active, Recovering, Disabled
+};
