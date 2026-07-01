@@ -1,23 +1,15 @@
 #pragma once
-
 #include "CoreMinimal.h"
-#include "Subsystems/WorldSubsystem.h"
+#include "UObject/NoExportTypes.h"
 #include "StrikerCameraManager.generated.h"
 
-/**
- * Manages active cameras, smooth transitions between broadcast, dynamic follow, and replays.
- */
 UCLASS()
-class PROJECTSTRIKERGAMEPLAY_API UStrikerCameraManager : public UWorldSubsystem
+class PROJECTSTRIKERGAMEPLAY_API UStrikerCameraManager : public UObject
 {
-	GENERATED_BODY()
-
+    GENERATED_BODY()
 public:
-	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
-
-	UFUNCTION(BlueprintCallable, Category = "Camera")
-	void SetCameraMode(FName ModeName);
-
-	UFUNCTION(BlueprintCallable, Category = "Camera")
-	void TriggerCinematicTransition();
+    void TransitionToBroadcast();
+    void TransitionToDynamicFollow();
+    void TransitionToGoalCamera();
+    void TransitionToReplay();
 };

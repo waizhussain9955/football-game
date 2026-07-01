@@ -1,11 +1,8 @@
-#include "StrikerRuleManager.h"
+#include "Managers/StrikerRuleManager.h"
+#include "StrikerLog.h"
 
-void UStrikerRuleManager::Initialize(FSubsystemCollectionBase& Collection)
-{
-	Super::Initialize(Collection);
-}
-
-bool UStrikerRuleManager::IsOffsideEnabled() const
-{
-	return true; // Configurable via Match Settings
-}
+void UStrikerRuleManager::InitializeRules() {}
+void UStrikerRuleManager::EvaluateBallOut() {}
+void UStrikerRuleManager::EvaluateOffside() {}
+void UStrikerRuleManager::EvaluateFoul() {}
+void UStrikerRuleManager::VisualizeRules() {}
