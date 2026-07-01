@@ -11,33 +11,17 @@
 		}
 	],
 	"Plugins": [
-		{
-			"Name": "ProjectStrikerCore",
-			"Enabled": true
-		},
-		{
-			"Name": "ProjectStrikerGameplay",
-			"Enabled": true
-		},
-		{
-			"Name": "ProjectStrikerAI",
-			"Enabled": true
-		},
-		{
-			"Name": "ProjectStrikerPhysics",
-			"Enabled": true
-		},
-		{
-			"Name": "ProjectStrikerAnimation",
-			"Enabled": true
-		},
-		{
-			"Name": "ProjectStrikerTools",
-			"Enabled": true
-		},
-		{
-			"Name": "ProjectStrikerEditor",
-			"Enabled": true
-		}
+		{ "Name": "ProjectStrikerCore", "Enabled": true },
+		{ "Name": "ProjectStrikerGameplay", "Enabled": true },
+		{ "Name": "ProjectStrikerAI", "Enabled": true },
+		{ "Name": "ProjectStrikerPhysics", "Enabled": true },
+		{ "Name": "ProjectStrikerAnimation", "Enabled": true },
+		{ "Name": "ProjectStrikerTools", "Enabled": true },
+		{ "Name": "ProjectStrikerEditor", "Enabled": true },
+		{ "Name": "ProjectStrikerReplay", "Enabled": true },
+		{ "Name": "ProjectStrikerAudio", "Enabled": true },
+		{ "Name": "ProjectStrikerUI", "Enabled": true },
+		{ "Name": "ProjectStrikerDeveloper", "Enabled": true },
+		{ "Name": "ProjectStrikerTesting", "Enabled": true }
 	]
 }
