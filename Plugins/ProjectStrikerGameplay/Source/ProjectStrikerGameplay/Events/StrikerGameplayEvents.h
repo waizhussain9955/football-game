@@ -71,3 +71,9 @@ enum class EStrikerBallState : uint8
 {
     Idle, Ready, Kickoff, Controlled, Loose, Rolling, Sliding, Airborne, Curving, Bouncing, Deflected, Intercepted, OutOfPlay, Goal, Replay, Frozen, Destroyed
 };
+
+UENUM(BlueprintType)
+enum class EStrikerActionState : uint8
+{
+    Idle, Preparing, Charging, Executing, Recovering, Cancelled, Interrupted, Failed, Completed
+};

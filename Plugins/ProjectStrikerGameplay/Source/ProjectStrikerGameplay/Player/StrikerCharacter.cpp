@@ -11,6 +11,7 @@
 #include "Player/Components/StrikerFootPlacementComponent.h"
 #include "Player/Components/StrikerMovementPredictionComponent.h"
 #include "Player/Components/StrikerDebugComponent.h"
+#include "Player/Components/StrikerActionComponent.h"
 #include "StrikerLog.h"
 
 AStrikerCharacter::AStrikerCharacter()
@@ -30,6 +31,9 @@ AStrikerCharacter::AStrikerCharacter()
     FootPlacement = CreateDefaultSubobject<UStrikerFootPlacementComponent>(TEXT("FootPlacement"));
     MovementPrediction = CreateDefaultSubobject<UStrikerMovementPredictionComponent>(TEXT("MovementPrediction"));
     Debug = CreateDefaultSubobject<UStrikerDebugComponent>(TEXT("Debug"));
+    
+    // Action Component Injection
+    Action = CreateDefaultSubobject<UStrikerActionComponent>(TEXT("Action"));
 }
 
 void AStrikerCharacter::PostInitializeComponents()
@@ -45,4 +49,5 @@ void AStrikerCharacter::PostInitializeComponents()
     // 6. Interaction
     // 7. Animation (Future)
     // 8. Debug
+    // 9. Action
 }
